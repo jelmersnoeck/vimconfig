@@ -1,11 +1,6 @@
 " Pathogen
 call pathogen#infect()
-
-" Autocompletion of some magic
 filetype plugin indent on
-
-" Disable mode lines to prevent unwanted code execution (CVE-2007-2438)
-set modelines=0
 
 " Searching
 set ignorecase
@@ -24,11 +19,11 @@ set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set mouse=a
 
-" Abbreviations
-ab sd Spoon::dump();<Left><Left>
-
 " Enable bash commands in vim.
 set shellcmdflag=-ic
+
+" Tell snipmate where to get our snippets
+let g:snippets_dir = "~/.vim/snippets"
 
 " Splitview options
 set splitright

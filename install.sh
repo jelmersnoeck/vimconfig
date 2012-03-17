@@ -1,5 +1,8 @@
 #!/bin/bash
 
+git submodule init
+git submodule update
+
 # Go trough all the files available in this folder.
 commonFiles=();
 for sourceFile in .*; do
