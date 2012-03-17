@@ -35,7 +35,7 @@ if [ $conflictCount -gt 0 ]; then
 
 	# Create a suffix with a timestamp so the user can see which
 	# files and when they've been backupped.
-	backupSuffix=".jsDotfiles-$(date +'%Y%m%d-%H%M%S')";
+	backupSuffix=".jsVimconfig-$(date +'%Y%m%d-%H%M%S')";
 
 	# Print some information about the replacement.
 	tput setaf 3;
