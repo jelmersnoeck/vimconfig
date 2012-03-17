@@ -1,3 +1,6 @@
+" Pathogen
+call pathogen#infect()
+
 " Autocompletion of some magic
 filetype plugin indent on
 
