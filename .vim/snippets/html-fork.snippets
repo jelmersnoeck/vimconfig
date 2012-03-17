@@ -1,0 +1,25 @@
+snippet iteration
+	{iteration:${1:IterationName}}
+		${2}
+	{/iteration:$1}
+
+snippet option
+	{option:${1:OptionName}}
+		${2}
+	{/option:$1}
+
+snippet dump
+	{$${1:var}|dump}
+
+snippet gufb
+	{$var|geturlforblock:'${1:module}':'${2:action}'}${3}
+
+snippet bbox
+	<div class="box">
+		<div class="heading">
+			<h3><label for="${1}">{$lbl${2}|ucfirst}</label></h3>
+		</div>
+		<div class="options">
+			{$${3:field}} {$$3Error}
+		</div>
+	</div>${4}
