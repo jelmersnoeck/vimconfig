@@ -14,6 +14,12 @@ snippet dump
 snippet gufb
 	{$var|geturlforblock:'${1:module}':'${2:action}'}${3}
 
+snippet fitem
+	<p>
+		<label for="${1:inputLabel}">${2:inputTitle}</label>
+		{$${3:inputField}} {$$3Error}
+	</p>${4}
+
 snippet bbox
 	<div class="box">
 		<div class="heading">
