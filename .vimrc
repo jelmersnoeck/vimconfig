@@ -19,6 +19,9 @@ set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set mouse=a
 
+" Highlight the current line
+set cursorline
+
 " Enable bash commands in vim.
 set shellcmdflag=-ic
 
