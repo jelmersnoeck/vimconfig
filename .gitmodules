@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/tasklist"]
 	path = .vim/bundle/tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
