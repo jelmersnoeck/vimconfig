@@ -49,7 +49,6 @@ autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 
 " We like 80 characters. To maintain this we use a highlight if we have more than 80
 set cc=100
-hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 
 " Less finger wrecking window navigation.
 nnoremap <c-j> <c-w>j

@@ -9,7 +9,7 @@
 " 8-color terminal, etc.).
 "
 " The functions in this theme that convert hex color codes to the nearest
-" xterm-256 color number are from the theme desert2 (desert256), developed by Henry So, Jr. 
+" xterm-256 color number are from the theme desert2 (desert256), developed by Henry So, Jr.
 "
 " The colors of this theme are based on the TextMate Twilight theme
 " – www.macromates.com
@@ -298,3 +298,5 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 endif
 
 " vim: set fdl=0 fdm=marker:
+hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
+hi ColorColumn   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
