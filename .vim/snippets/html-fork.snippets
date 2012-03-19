@@ -20,6 +20,11 @@ snippet fitem
 		{$${3:inputField}} {$$3Error}
 	</p>${4}
 
+snippet submit
+	<p>
+		<input type="submit" name="${1:formSubmit}" value="${2:{$lblSave|ucfirst}}" />
+	<p>${4}
+
 snippet bbox
 	<div class="box">
 		<div class="heading">
