@@ -1,7 +1,6 @@
 snippet php
 	<?php
 	${1}
-
 # Function
 snippet fun
 	/**
@@ -9,38 +8,32 @@ snippet fun
 	 *
 	 * @param ${5:param}
 	 * @return ${6:void}
-	 **/
+	 */
 	${1:public} function ${2}(${3})
 	{${7}
 	}
-
 # define(...)
 snippet def
 	define('${1}'${2});${3}
-
 # defined(...)
 snippet def?
 	${1}defined('${2}')${3}
-
 snippet wh
 	while(${1:/* condition */})
 	{
 		${2:// code...}
 	}
-
 # do ... while
 snippet do
 	do
 	{
 		${2:// code... }
 	} while(${1:/* condition */});
-
 snippet if
 	if(${1:/* condition */})
 	{
 		${2:// code...}
 	}
-
 snippet ife
 	if(${1:/* condition */})
 	{
@@ -51,23 +44,19 @@ snippet ife
 		${3:// code...}
 	}
 	${4}
-
 snippet else
 	else
 	{
 		${1:// code...}
 	}
-
 snippet elseif
 	elseif(${1:/* condition */})
 	{
 		${2:// code...}
 	}
-
 # Tertiary conditional
 snippet t
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
-
 snippet switch
 	switch($${1:variable})
 	{
@@ -79,24 +68,20 @@ snippet switch
 			${4:// code...}
 			break;
 	}
-
 snippet case
 	case '${1:value}':
 		${2:// code...}
 		break;${3}
-
 snippet for
 	for($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
 	{
 		${4: // code...}
 	}
-
 snippet foreach
 	foreach($${1:variable} as $${2:key})
 	{
 		${3:// code...}
 	}
-
 # $... = array (...)
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
