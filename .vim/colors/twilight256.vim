@@ -300,3 +300,4 @@ endif
 " vim: set fdl=0 fdm=marker:
 hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
 hi ColorColumn   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
+hi SpecialKey cterm=NONE ctermfg=darkgray
