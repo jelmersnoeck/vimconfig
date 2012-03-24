@@ -46,6 +46,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " .tpl files are mainly (x)html files, xhtml gives better omni completion.
 autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
+autocmd BufNewFile,BufRead *.twig set filetype=xhtml
 
 " We like 80 characters. To maintain this we use a highlight if we have more than 80
 set cc=100
