@@ -66,7 +66,10 @@ set synmaxcol=16384
 " Indentation settings
 set autoindent
 set smartindent
-set noexpandtab
+" set noexpandtab
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
 " Whitespace settings
 set shiftwidth=4
