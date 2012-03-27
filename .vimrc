@@ -57,6 +57,13 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" This will enable us to have a nice choice with ctags
+nnoremap <C-]> g<C-]>
+
+" Hop from method to method
+nmap <c-n> ]]
+nmap <c-p> [[
+
 " Syntax highlighting
 color twilight256
 syntax on
@@ -66,10 +73,10 @@ set synmaxcol=16384
 " Indentation settings
 set autoindent
 set smartindent
-" set noexpandtab
-set expandtab
-set tabstop=4
-set shiftwidth=4
+set noexpandtab
+" set expandtab
+" set tabstop=4
+" set shiftwidth=4
 
 " Whitespace settings
 set shiftwidth=4
