@@ -1,2 +1,8 @@
 snippet sd
 	Spoon::dump(${1:'foo'});
+snippet reqbfield
+	$fields['${1}']->isFilled(BL::err('FieldIsRequired'));${2}
+snippet reqffield
+	$fields['${1}']->isFilled(FL::err('FieldIsRequired'));${2}
+snippet gvalue
+	$fields['${1}']->getValue();${2}
