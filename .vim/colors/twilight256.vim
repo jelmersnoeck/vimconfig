@@ -235,10 +235,10 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     endfun
     " }}}
 
-    call <SID>X("Normal", "ffffff", "", "")
+    call <SID>X("Normal", "ffffff", "262626", "")
 
     " highlight groups
-    "call <SID>X("Cursor", "708090", "f0e68c", "")
+    call <SID>X("Cursor", "708090", "f0e68c", "")
     "CursorIM
     "Directory
     "DiffAdd
@@ -249,17 +249,17 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     "call <SID>X("VertSplit", "c2bfa5", "7f7f7f", "reverse")
     "call <SID>X("Folded", "ffd700", "4d4d4d", "")
     "call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
-    "call <SID>X("IncSearch", "708090", "f0e68c", "")
+    call <SID>X("IncSearch", "708090", "f0e68c", "")
     call <SID>X("LineNr", "CCCCCC", "", "")
     "call <SID>X("ModeMsg", "D4D4D4", "", "")
     "call <SID>X("MoreMsg", "2e8b57", "", "")
     "call <SID>X("NonText", "addbe7", "000000", "bold")
     "call <SID>X("Question", "00ff7f", "", "")
-    "call <SID>X("Search", "f5deb3", "cd853f", "")
-    "call <SID>X("SpecialKey", "9acd32", "", "")
-    "call <SID>X("StatusLine", "c2bfa5", "000000", "reverse")
-    "call <SID>X("StatusLineNC", "c2bfa5", "7f7f7f", "reverse")
-    "call <SID>X("Title", "cd5c5c", "", "")
+    call <SID>X("Search", "f5deb3", "cd853f", "")
+    call <SID>X("SpecialKey", "9acd32", "", "")
+    call <SID>X("StatusLine", "c2bfa5", "000000", "reverse")
+    call <SID>X("StatusLineNC", "c2bfa5", "7f7f7f", "reverse")
+    call <SID>X("Title", "cd5c5c", "", "")
     call <SID>X("Visual", "D3D3D3", "3E3E3E", "reverse")
     "VisualNOS
     "call <SID>X("WarningMsg", "fa8072", "", "")
@@ -300,4 +300,3 @@ endif
 " vim: set fdl=0 fdm=marker:
 hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
 hi ColorColumn   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
-hi SpecialKey cterm=NONE ctermfg=darkgray

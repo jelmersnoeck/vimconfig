@@ -48,6 +48,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=xhtml
 
+" Specify a font
+set gfn=Menlo:h13
+
 " We like 80 characters. To maintain this we use a highlight if we have more than 80
 set cc=100
 
