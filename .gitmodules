@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/git"]
 	path = .vim/bundle/git
 	url = https://github.com/motemen/git-vim.git
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git

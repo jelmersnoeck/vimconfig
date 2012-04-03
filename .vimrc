@@ -70,9 +70,15 @@ nnoremap <c-n> :let &wh = (&wh == 999 ? 10 : 999)<CR><C-W>=
 " This will enable us to have a nice choice with ctags
 nnoremap <C-]> g<C-]>
 
+" CtrlP Mapping to CtrlT
+let g:ctrlp_map = '<c-t>'
+
+" CtrlP directories to ignore
+let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
+
 " Hop from method to method
 nmap <c-n> ]]
-nmap <c-p> [[
+nmap <c-n> [[
 
 " Syntax highlighting
 color twilight256
