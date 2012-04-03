@@ -60,6 +60,13 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+set winwidth=81
+set nonumber
+set winheight=5
+set winminheight=5
+set winheight=999
+nnoremap <c-n> :let &wh = (&wh == 999 ? 10 : 999)<CR><C-W>=
+
 " This will enable us to have a nice choice with ctags
 nnoremap <C-]> g<C-]>
 

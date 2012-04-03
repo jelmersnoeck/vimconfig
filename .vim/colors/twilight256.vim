@@ -246,7 +246,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     "DiffDelete
     "DiffText
     "ErrorMsg
-    "call <SID>X("VertSplit", "c2bfa5", "7f7f7f", "reverse")
+    call <SID>X("VertSplit", "c2bfa5", "7f7f7f", "reverse")
     "call <SID>X("Folded", "ffd700", "4d4d4d", "")
     "call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
     call <SID>X("IncSearch", "708090", "f0e68c", "")
