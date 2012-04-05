@@ -80,14 +80,11 @@ set synmaxcol=16384
 set autoindent
 set smartindent
 set noexpandtab
+set softtabstop=4
+set tabstop=4
 " set expandtab
 " set tabstop=4
 " set shiftwidth=4
-
-" Whitespace settings
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
 
 " Code folding
 set foldmethod=indent
@@ -98,11 +95,9 @@ set foldlevel=5
 " Do not pollute the working directory with swap and other files
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-" Auto-completion
-set wildmode=longest,list,full
-
 " Show a menu at the bottom of the vim window.
 set wildmenu
+set wildmode=longest,list,full
 
 " Show line numbers and make them 5 characters wide
 map <F6> :set number!<CR>
