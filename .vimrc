@@ -17,6 +17,7 @@ set showcmd
 set nowrap
 set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
+set bs=2
 
 " Highlight the current line
 set cursorline
@@ -45,7 +46,7 @@ autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=xhtml
 
 " Specify a font
-" set gfn=Menlo:h13
+set gfn=Menlo:h13
 
 " We like 80 characters. To maintain this we use a highlight if we have more than 80
 set cc=100
@@ -60,10 +61,10 @@ nnoremap <c-l> <c-w>l
 nnoremap <C-]> g<C-]>
 
 " CtrlP Mapping to CtrlT
-" let g:ctrlp_map = '<c-t>'
+let g:ctrlp_map = '<c-t>'
 
 " CtrlP directories to ignore
-" let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
+let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
 
 " Hop from method to method
 nmap <c-n> ]]
