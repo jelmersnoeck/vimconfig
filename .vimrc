@@ -18,8 +18,6 @@ set nowrap
 set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set bs=2
-
-" Highlight the current line
 set cursorline
 
 " Tell snipmate where to get our snippets

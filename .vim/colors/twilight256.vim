@@ -239,6 +239,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
     " highlight groups
     call <SID>X("Cursor", "708090", "f0e68c", "")
+    call <SID>X("CursorLine", "ffffff", "525252", "")
+    call <SID>X("ColorColumn", "ffffff", "525252", "")
     "CursorIM
     "Directory
     "DiffAdd
@@ -296,7 +298,3 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     delf <SID>grey_number
     " }}}
 endif
-
-" vim: set fdl=0 fdm=marker:
-hi CursorLine   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
-hi ColorColumn   cterm=NONE ctermbg=darkgray ctermfg=white guibg=darkgray guifg=white
