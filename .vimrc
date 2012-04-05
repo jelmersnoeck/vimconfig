@@ -99,6 +99,9 @@ map <Right> :echo "no!"<cr>
 map <Up> :echo "no!"<cr>
 map <Down> :echo "no!"<cr>
 
+" Learn to use <c-c>!
+inoremap <Esc> <NOP>
+
 " Do not pollute the working directory with swap and other files
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
