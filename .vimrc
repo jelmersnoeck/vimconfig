@@ -2,6 +2,8 @@
 call pathogen#infect()
 filetype plugin indent on
 
+set nocompatible
+
 " Searching
 set ignorecase
 set smartcase
@@ -19,6 +21,7 @@ set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 set bs=2
 set cursorline
+set shell=bash
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
@@ -90,7 +93,15 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=5
 
+" No arrow keys allowed!
+map <Left> :echo "no!"<cr>
+map <Right> :echo "no!"<cr>
+map <Up> :echo "no!"<cr>
+map <Down> :echo "no!"<cr>
+
 " Do not pollute the working directory with swap and other files
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " Show a menu at the bottom of the vim window.
