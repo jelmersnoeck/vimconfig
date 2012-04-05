@@ -17,13 +17,9 @@ set showcmd
 set nowrap
 set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
-set mouse=a
 
 " Highlight the current line
 set cursorline
-
-" Enable bash commands in vim.
-set shellcmdflag=-ic
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
@@ -49,7 +45,7 @@ autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=xhtml
 
 " Specify a font
-set gfn=Menlo:h13
+" set gfn=Menlo:h13
 
 " We like 80 characters. To maintain this we use a highlight if we have more than 80
 set cc=100
@@ -60,21 +56,14 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-set winwidth=81
-set nonumber
-set winheight=5
-set winminheight=5
-set winheight=999
-nnoremap <c-n> :let &wh = (&wh == 999 ? 10 : 999)<CR><C-W>=
-
 " This will enable us to have a nice choice with ctags
 nnoremap <C-]> g<C-]>
 
 " CtrlP Mapping to CtrlT
-let g:ctrlp_map = '<c-t>'
+" let g:ctrlp_map = '<c-t>'
 
 " CtrlP directories to ignore
-let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
+" let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
 
 " Hop from method to method
 nmap <c-n> ]]
