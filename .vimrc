@@ -10,6 +10,8 @@ set smartcase
 set incsearch
 map <F7> :set hlsearch!<CR>
 
+let mapleader = "~"
+
 " Interface
 set ruler
 set laststatus=2
@@ -19,9 +21,11 @@ set showcmd
 set nowrap
 set list
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
-set bs=2
 set cursorline
 set shell=bash
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
@@ -37,7 +41,10 @@ set history=1024
 set undolevels=1024
 
 " When editing a file, always jump to the last known cursor position.
-autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
 
 " Delete trailing whitespaces on saving a file
 autocmd BufWritePre * :%s/\s\+$//e
@@ -45,6 +52,13 @@ autocmd BufWritePre * :%s/\s\+$//e
 " .tpl files are mainly (x)html files, xhtml gives better omni completion.
 autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=xhtml
+
+" These types are fussy about tabs and spaces.
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+
+" easily add a => sign
+imap <c-l> <space>=><space>
 
 " Specify a font
 set gfn=Menlo:h13
@@ -66,6 +80,8 @@ let g:ctrlp_map = '<c-t>'
 
 " CtrlP directories to ignore
 let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
+
+map <leader>y "*y
 
 " Hop from method to method
 nmap <c-n> ]]
