@@ -1,70 +1,55 @@
-" Pathogen
-call pathogen#infect()
+" ----- Defaults -----
+
+set nocompatible		" use Vim defaults.
+
+" ----- Pathogen -----
+
+call pathogen#infect()	" Pathogen must be called before filetype detection.
 filetype plugin indent on
 
-set nocompatible
+" ----- Text formatting -----
 
-" Searching
-set ignorecase
-set smartcase
-set incsearch
-map <F7> :set hlsearch!<CR>
+set autoindent			" automatic indent new lines.
+set smartindent			" make it smart.
+set copyindent			" copy structure of existing lines.
+set cindent				" enable automatic C program indenting.
+set nowrap				" do not wrap lines.
+set shiftwidth=4		" use four characters for tabs.
+set softtabstop=4		" mindblowing.
+set tabstop=4			" skullcracking.
+" set backspace=indent,eol,start
 
-let mapleader = "~"
+" ----- UI settings -----
 
-" Interface
-set ruler
-set laststatus=2
-set showmode
-set showmatch
-set showcmd
-set nowrap
-set list
-set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
-set cursorline
+set ruler				" always show cursor position.
+set showmode			" show the mode we're currently in.
+set showcmd				" always display commands.
+set showmatch			" highlight matching brackets/showbraces.
+set list				" enable listcharacters.
+set laststatus=2		" show status line.
+set cursorline			" visualize current line.
+
+" ----- File navigation -----
+
+set wildmenu			" display all possibilities on autocomplete.
+set wildmode=longest,list,full
+
+" ----- Command settings -----
 set shell=bash
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" ----- Movement -----
 
-" Tell snipmate where to get our snippets
-let g:snippets_dir = "~/.vim/snippets"
+" leave your visual world behind.
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
 
-" Splitview options
-set splitright
-set splitbelow
-
-set tabpagemax=1024
-
-" History
-set history=1024
-set undolevels=1024
-
-" When editing a file, always jump to the last known cursor position.
-autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-" Delete trailing whitespaces on saving a file
-autocmd BufWritePre * :%s/\s\+$//e
-
-" .tpl files are mainly (x)html files, xhtml gives better omni completion.
-autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
-autocmd BufNewFile,BufRead *.twig set filetype=xhtml
-
-" These types are fussy about tabs and spaces.
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-
-" easily add a => sign
-imap <c-l> <space>=><space>
-
-" Specify a font
-set gfn=Menlo:h13
-
-" We like 80 characters. To maintain this we use a highlight if we have more than 80
-set cc=100
+" force myself to leave insert mode for movement.
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Less finger wrecking window navigation.
 nnoremap <c-j> <c-w>j
@@ -75,58 +60,70 @@ nnoremap <c-l> <c-w>l
 " This will enable us to have a nice choice with ctags
 nnoremap <C-]> g<C-]>
 
-" CtrlP Mapping to CtrlT
-let g:ctrlp_map = '<c-t>'
-
-" CtrlP directories to ignore
-let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
-
-map <leader>y "*y
-
 " Hop from method to method
 nmap <c-n> ]]
 nmap <c-n> [[
 
-" Syntax highlighting
-color twilight256
-syntax on
-syntax sync fromstart
-set synmaxcol=16384
+" Copy to our clipboard
+map <leader>y "*y
 
-" Indentation settings
-set autoindent
-set smartindent
-set noexpandtab
-set softtabstop=4
-set tabstop=4
-" set expandtab
-" set tabstop=4
-" set shiftwidth=4
+" ----- Searching -----
 
-" Code folding
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=5
+set ignorecase			" no case sensitivity please.
+set smartcase			" search case sensitive if i'm willing to.
+set incsearch			" do incremental search.
 
-" No arrow keys allowed!
-map <Left> :echo "no!"<cr>
-map <Right> :echo "no!"<cr>
-map <Up> :echo "no!"<cr>
-map <Down> :echo "no!"<cr>
+" ----- Syntax and such -----
 
-" Learn to use <c-c>!
-inoremap <Esc> <NOP>
+syntax on				" enable syntax highlighting.
+color twilight256		" use zenburn colorscheme.
+set synmaxcol=512		" try highlighting maximum 512 columns.
 
-" Do not pollute the working directory with swap and other files
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+" ----- Formatting -----
+
+set fileformat=unix		" always use unix fileformat.
+set encoding=utf-8		" force UTF-8 encoding.
+
+" ----- Custom mapping -----
+
+" F7 toggles highlighted search.
+map <F7> :set hlsearch!<CR>
+
+" ----- Remapping -----
+inoremap <Esc> <nop>	" Force us to use <c-c>
+let mapleader = "~"
+
+" ----- Chromed out, pimped out -----
+
+" visualize stuff.
+set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
+
+" on editing, jump to last known cursor position.
+autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+
+" on save, remove trailing spaces.
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Do not pollute the working directory with swap and other files.
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-" Show a menu at the bottom of the vim window.
-set wildmenu
-set wildmode=longest,list,full
+" custom statusline
+set statusline=%<%f\ %m%r\ %=line\ %l\ of\ %L\ %15.15(col\ %c%V%)\ %25.25(%{&ff},%{strlen(&fenc)?&fenc:'none'}\ %y%)\ "
 
-" Show line numbers and make them 5 characters wide
-map <F6> :set number!<CR>
-set numberwidth=5
+" .tpl files are mainly (x)html files, xhtml gives better omni completion.
+autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
+autocmd BufNewFile,BufRead *.twig set filetype=xhtml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" ----- Shortcuts -----
+" Easily add a ' => ' sign
+imap <c-l> <space>=><space>
+
+" ----- Plugins -----
+
+" Tell snipmate where to get our snippets
+let g:snippets_dir = "~/.vim/snippets"
+
+" Tell ctrlp some new settings
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
