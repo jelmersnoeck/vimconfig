@@ -39,18 +39,6 @@ set shell=bash
 
 " ----- Movement -----
 
-" leave your visual world behind.
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-
-" force myself to leave insert mode for movement.
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 " Less finger wrecking window navigation.
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -90,7 +78,6 @@ set encoding=utf-8		" force UTF-8 encoding.
 map <F7> :set hlsearch!<CR>
 
 " ----- Remapping -----
-inoremap <Esc> <nop>	" Force us to use <c-c>
 let mapleader = "~"
 
 " ----- Chromed out, pimped out -----
@@ -125,5 +112,4 @@ imap <c-l> <space>=><space>
 let g:snippets_dir = "~/.vim/snippets"
 
 " Tell ctrlp some new settings
-let g:ctrlp_map = '<c-t>'
 let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
