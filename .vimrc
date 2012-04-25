@@ -36,6 +36,7 @@ set wildmode=longest,list,full
 
 " ----- Command settings -----
 set shell=bash
+let mapleader = "~"
 
 " ----- Movement -----
 
@@ -78,7 +79,6 @@ set encoding=utf-8		" force UTF-8 encoding.
 map <F7> :set hlsearch!<CR>
 
 " ----- Remapping -----
-let mapleader = "~"
 
 " ----- Chromed out, pimped out -----
 
