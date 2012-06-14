@@ -255,8 +255,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     "call <SID>X("MoreMsg", "2e8b57", "", "")
     "call <SID>X("NonText", "addbe7", "000000", "bold")
     "call <SID>X("Question", "00ff7f", "", "")
-    "call <SID>X("Search", "f5deb3", "cd853f", "")
-    "call <SID>X("SpecialKey", "9acd32", "", "")
+    call <SID>X("Search", "f5deb3", "cd853f", "")
+    call <SID>X("SpecialKey", "9acd32", "", "")
     "call <SID>X("StatusLine", "c2bfa5", "000000", "reverse")
     "call <SID>X("StatusLineNC", "c2bfa5", "7f7f7f", "reverse")
     "call <SID>X("Title", "cd5c5c", "", "")
@@ -299,5 +299,5 @@ endif
 
 " vim: set fdl=0 fdm=marker:
 
-highlight CursorLine cterm=none ctermbg=235 ctermfg=none
+highlight CursorLine cterm=none ctermbg=240 ctermfg=none
 highlight TabLineFill cterm=none ctermbg=242 ctermfg=none
