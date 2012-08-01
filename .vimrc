@@ -30,6 +30,7 @@ set list				" enable listcharacters.
 set laststatus=2		" show status line.
 set cursorline			" visualize current line.
 set nopaste				" don't use stupid paste settings
+set colorcolumn=80
 
 " ----- File navigation -----
 
