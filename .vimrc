@@ -115,4 +115,7 @@ imap <c-l> <space>=><space>
 let g:snippets_dir = "~/.vim/snippets"
 
 " Tell ctrlp some new settings
-let g:ctrlp_custom_ignore = '\.git$\|\.svn$'
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|cache$',
+    \ 'file': '\.exe$\|\.so$\|\.swp$',
+    \ }

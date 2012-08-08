@@ -6,3 +6,19 @@ snippet reqffield
 	$fields['${1}']->isFilled(FL::err('FieldIsRequired'));${2}
 snippet gvalue
 	$fields['${1}']->getValue();${2}
+snippet pagination
+	$requestedPage = $this->URL->getParameter('page', 'int', 1);
+
+	$this->pagination['url'] = FrontendNavigation::getURLForBlock('${1}');
+	$this->pagination['limit'] = FrontendModel::getModuleSetting('${1}', 'overview_num_items', 10);
+
+	$this->pagination['num_items'] = Frontend${2}Model::getAllCount();
+	$this->pagination['num_pages'] = (int) ceil($this->pagination['num_items'] / $this->pagination['limit']);
+
+	if($this->pagination['num_pages'] == 0) $this->pagination['num_pages'] = 1;
+	if($requestedPage > $this->pagination['num_pages'] || $requestedPage < 1) $this->redirect(FrontendNavigation::getURL(404));
+
+	$this->pagination['requested_page'] = $requestedPage;
+	$this->pagination['offset'] = ($this->pagination['requested_page'] * $this->pagination['limit']) - $this->pagination['limit'];
+
+	$this->items = Frontend${2}Model::getRange($this->pagination['limit'], $this->pagination['offset']);
