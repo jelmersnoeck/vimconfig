@@ -109,50 +109,6 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
 
-" ----- Plugins -----
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" AutoComplPop default + Eclim configuration.
-" This contains user defined completion for PHP completion with Eclim.
-" Note that if you do not have Eclim installed, this obviously won't work.
-"
-" I modified the example given in the Eclim docs:
-" http://eclim.org/vim/code_completion.html#vim-code-completion
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" AutoComplPop setting to trigger default autocompletion after 4 typed, matching chars
-let g:acp_behaviorKeywordLength = 4
-
-let g:acp_behaviorPHPEclimLength = 4
-let g:acp_behavior = {
-    \ 'php': [
-        \{
-            \ 'meets'           : 'AutocompletePHPEclim',
-            \ 'command'         : "\<c-x>\<c-u>",
-            \ 'completefunc'    : 'eclim#php#complete#CodeComplete'
-        \},
-        \{
-            \ 'meets'           : "AutocompletePHPKeywords",
-            \ 'command'         : "\<c-x>\<c-p>",
-            \ 'repeat'          : 0
-        \}
-    \]
-\}
-
-" This gives eclipse completion on $var-> and class::
-function! AutocompletePHPEclim(context)
-    if(a:context =~ '\k->\k\{0,}$' || a:context =~ '\(self\|parent\)::\k\{0,}$')
-        return 1
-    else
-        return g:acp_behaviorPHPEclimLength >= 0 && (a:context =~ '\k::\k\{' . g:acp_behaviorPHPEclimLength . ',}$')
-    endif
-endfunction
-
-" This providedes buffer completion on regular keywords/variables
-function! AutocompletePHPKeywords(context)
-    if(a:context =~ '\k\{' . g:acp_behaviorKeywordLength . ',}$')
-        return 1
-    endif
-endfunction
-
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
 
