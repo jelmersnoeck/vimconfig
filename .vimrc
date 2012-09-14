@@ -109,6 +109,11 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
 
+" ----- Plugins -----
+
+imap <buffer> <Leader>u <C-O>:call PhpInsertUse()<CR>
+map <buffer> <Leader>u :call PhpInsertUse()<CR>
+
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
 
