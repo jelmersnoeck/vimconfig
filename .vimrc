@@ -76,10 +76,27 @@ set synmaxcol=512		" try highlighting maximum 512 columns.
 set fileformat=unix		" always use unix fileformat.
 set encoding=utf-8		" force UTF-8 encoding.
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RENAME CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
 " ----- Custom mapping -----
 
 " F7 toggles highlighted search.
 map <F7> :set hlsearch!<CR>
+
+" ----- PHPSpec2 ----
+map <leader>r :!./bin/phpspec run<cr>
 
 " ----- Remapping -----
 
