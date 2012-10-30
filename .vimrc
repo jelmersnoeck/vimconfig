@@ -31,6 +31,16 @@ set laststatus=2		" show status line.
 set cursorline			" visualize current line.
 set nopaste				" don't use stupid paste settings
 set colorcolumn=80
+set number
+set numberwidth=2
+set relativenumber
+set autoread
+set history=1000
+
+" Remember undo's even when buffer has been in the background.
+" Also allows for sending buffers to the background without saving...
+set hidden
+set autowrite
 
 " ----- File navigation -----
 
@@ -54,7 +64,7 @@ nnoremap <C-]> g<C-]>
 
 " Hop from method to method
 nmap <c-n> ]]
-nmap <c-n> [[
+nmap <c-m> [[
 
 " Copy to our clipboard
 map <leader>y "*y
