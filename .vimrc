@@ -31,9 +31,6 @@ set laststatus=2		" show status line.
 set cursorline			" visualize current line.
 set nopaste				" don't use stupid paste settings
 set colorcolumn=80
-set number
-set numberwidth=2
-set relativenumber
 set autoread
 set history=1000
 
