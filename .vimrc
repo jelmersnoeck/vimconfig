@@ -64,7 +64,7 @@ nmap <c-n> ]]
 nmap <c-m> [[
 
 " Copy to our clipboard
-map <leader>y "*y
+map <leader>y !pbcopy<CR>u
 
 " ----- Searching -----
 
