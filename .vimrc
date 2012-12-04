@@ -103,7 +103,7 @@ map <leader>n :call RenameFile()<cr>
 map <F7> :set hlsearch!<CR>
 
 " ----- PHPSpec2 ----
-map <leader>r :!./bin/phpspec run<cr>
+map <leader>r :!phpunit -c app %<cr>
 
 " ----- Remapping -----
 
