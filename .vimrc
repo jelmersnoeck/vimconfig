@@ -135,14 +135,14 @@ imap <c-l> <space>=><space>
 
 " ----- Plugins -----
 
-imap <buffer> <Leader>u <C-O>:call PhpInsertUse()<CR>
-map <buffer> <Leader>u :call PhpInsertUse()<CR>
+imap <leader>u <C-O>:call PhpInsertUse()<CR>
+map <leader>u :call PhpInsertUse()<CR>
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
 
 " Tell ctrlp some new settings
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|cache$\|vendor$\|web$',
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|cache$\|vendor$\|web$\|code-coverage$\|code-documentation$',
     \ 'file': '\.exe$\|\.so$\|\.swp\|\.DS_STORE$',
     \ }
