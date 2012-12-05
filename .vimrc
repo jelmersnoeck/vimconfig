@@ -127,7 +127,7 @@ set statusline=%<%f\ %m%r\ %=line\ %l\ of\ %L\ %15.15(col\ %c%V%)\ %25.25(%{&ff}
 " .tpl files are mainly (x)html files, xhtml gives better omni completion.
 autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=htmldjango
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 
 " ----- Shortcuts -----
 " Easily add a ' => ' sign
