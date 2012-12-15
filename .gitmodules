@@ -4,9 +4,6 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
-[submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/php-namespace"]
 	path = .vim/bundle/php-namespace
 	url = https://github.com/arnaud-lb/vim-php-namespace
