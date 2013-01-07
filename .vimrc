@@ -144,5 +144,5 @@ let g:snippets_dir = "~/.vim/snippets"
 " Tell ctrlp some new settings
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|cache$\|vendor$\|web$\|code-coverage$\|code-documentation$',
-    \ 'file': '\.exe$\|\.so$\|\.swp\|\.DS_STORE$',
+    \ 'file': '\.exe$\|\.so$\|\.swp\|\.DS_STORE\|.php\~$',
     \ }
