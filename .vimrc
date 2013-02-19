@@ -102,8 +102,10 @@ map <leader>n :call RenameFile()<cr>
 " F7 toggles highlighted search.
 map <F7> :set hlsearch!<CR>
 
-" ----- PHPSpec2 ----
-map <leader>r :!clear && phpunit -c app %<cr>
+" ----- PHPUnit ----
+" I'm using linux fifos for this. See the command "test-listener" for more
+" information.
+map <leader>r :!echo "clear && phpunit -c app %" > ~/.bash/test-commands<cr><cr>
 
 " ----- Remapping -----
 
