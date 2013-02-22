@@ -105,7 +105,7 @@ map <F7> :set hlsearch!<CR>
 " ----- PHPUnit ----
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
-map <leader>r :!echo "clear && phpunit -c app %" > ~/.bash/test-commands<cr><cr>
+map <leader>r :!echo "phpunit -c app %" > ~/.bash/test-commands<cr><cr>
 
 " ----- Remapping -----
 
