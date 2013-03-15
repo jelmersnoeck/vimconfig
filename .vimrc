@@ -102,11 +102,6 @@ map <leader>n :call RenameFile()<cr>
 " F7 toggles highlighted search.
 map <F7> :set hlsearch!<CR>
 
-" ----- PHPUnit ----
-" I'm using linux fifos for this. See the command "test-listener" for more
-" information.
-map <leader>r :!echo "phpunit -c app %" > test-commands<cr><cr>
-
 " ----- Remapping -----
 
 " ----- Chromed out, pimped out -----
@@ -134,11 +129,6 @@ autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 " ----- Shortcuts -----
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
-
-" ----- Plugins -----
-
-imap <leader>u <C-O>:call PhpInsertUse()<CR>
-map <leader>u :call PhpInsertUse()<CR>
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
