@@ -16,3 +16,6 @@ map <leader>r :!echo "phpunit -c app %" > test-commands<cr><cr>
 " Insert namespaces easily, based upon ctags.
 imap <leader>u <C-O>:call PhpInsertUse()<CR>
 map <leader>u :call PhpInsertUse()<CR>
+
+" Easily add a ' => ' sign
+imap <c-l> <space>=><space>

@@ -102,10 +102,6 @@ map <leader>n :call RenameFile()<cr>
 " F7 toggles highlighted search.
 map <F7> :set hlsearch!<CR>
 
-" ----- Remapping -----
-
-" ----- Chromed out, pimped out -----
-
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
 
@@ -119,16 +115,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " custom statusline
-set statusline=%<%f\ %m%r\ %=line\ %l\ of\ %L\ %15.15(col\ %c%V%)\ %25.25(%{&ff},%{strlen(&fenc)?&fenc:'none'}\ %y%)\ "
+set statusline=%<%f\ %m%r\ %=line\ %l\ of\ %L\ %(@\ %c%V%)\ %25.25(%{&ff},%{strlen(&fenc)?&fenc:'none'}\ %y%)\ "
 
 " .tpl files are mainly (x)html files, xhtml gives better omni completion.
 autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=htmldjango
 autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
-
-" ----- Shortcuts -----
-" Easily add a ' => ' sign
-imap <c-l> <space>=><space>
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
