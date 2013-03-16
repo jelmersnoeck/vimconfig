@@ -46,7 +46,6 @@ set wildmode=longest,list,full
 
 " ----- Command settings -----
 set shell=bash
-let mapleader = "~"
 
 " ----- Movement -----
 
