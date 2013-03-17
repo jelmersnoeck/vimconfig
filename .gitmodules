@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/nerdommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = git@github.com:scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/todo"]
+	path = .vim/bundle/todo
+	url = git@github.com:dubgeiser/vim-todo.git
