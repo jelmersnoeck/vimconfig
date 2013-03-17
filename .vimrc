@@ -129,3 +129,11 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|cache$\|vendor$\|web$\|code-coverage$\|code-documentation$\|cookbooks$\|Resources\/doc$',
     \ 'file': '\.exe$\|\.so$\|\.swp\|\.DS_STORE\|.php\~$',
     \ }
+
+" Vim-Todo mapping
+nmap <Leader>o :call Todo_ToggleTickbox()<cr>
+vmap <Leader>o :call Todo_ToggleTickbox()<cr>
+nmap <Leader>v :call Todo_TickFinished()<cr>
+vmap <Leader>v :call Todo_TickFinished()<cr>
+nmap <Leader>x :call Todo_TickCancelled()<cr>
+vmap <Leader>x :call Todo_TickCancelled()<cr>
