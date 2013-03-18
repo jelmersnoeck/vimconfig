@@ -16,9 +16,9 @@
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
-[submodule ".vim/bundle/nerdommenter"]
-	path = .vim/bundle/nerdcommenter
-	url = git@github.com:scrooloose/nerdcommenter.git
 [submodule ".vim/bundle/todo"]
 	path = .vim/bundle/todo
 	url = git@github.com:dubgeiser/vim-todo.git
+[submodule ".vim/bundle/nerdcommenter"]
+	path = .vim/bundle/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
