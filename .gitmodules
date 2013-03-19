@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/webapi"]
 	path = .vim/bundle/webapi
 	url = git@github.com:mattn/webapi-vim.git
+[submodule ".vim/bundle/ruby"]
+	path = .vim/bundle/ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
