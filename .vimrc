@@ -70,6 +70,7 @@ map <leader>y !pbcopy<CR>u
 set ignorecase			" no case sensitivity please.
 set smartcase			" search case sensitive if i'm willing to.
 set incsearch			" do incremental search.
+set hlsearch
 
 " ----- Syntax and such -----
 
@@ -97,9 +98,6 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 " ----- Custom mapping -----
-
-" F7 toggles highlighted search.
-map <F7> :set hlsearch!<CR>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
