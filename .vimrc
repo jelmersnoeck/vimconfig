@@ -128,6 +128,9 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.exe$\|\.so$\|\.swp\|\.DS_STORE\|.php\~$',
     \ }
 
+let g:ctrlp_map = '<c-i>'
+let g:ctrlp_working_path_mode = 'cra'
+
 " Vim-Todo mapping
 nmap <Leader>o :call Todo_ToggleTickbox()<cr>
 vmap <Leader>o :call Todo_ToggleTickbox()<cr>
