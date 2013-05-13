@@ -10,7 +10,7 @@ set softtabstop=4
 " ----- PHPUnit ----
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
-map <leader>r :!echo "phpunit -c app %" > test-commands<cr><cr>
+map <leader>r :!./bin/phpunit -c app %<cr>
 
 " ----- Namespaces -----
 " Insert namespaces easily, based upon ctags.
