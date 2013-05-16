@@ -46,6 +46,7 @@ set wildmode=longest,list,full
 
 " ----- Command settings -----
 set shell=bash
+set grepprg=ack
 
 " ----- Movement -----
 
