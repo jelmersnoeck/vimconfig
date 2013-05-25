@@ -3,6 +3,9 @@
 " information.
 map <leader>r :!echo "clear && rspec -c %" > test-commands<cr><cr>
 
+" Easily add a ' => ' sign
+imap <c-l> <space>=><space>
+
 " This is the recommended setting for Ruby:
 set shiftwidth=2
 set tabstop=2
