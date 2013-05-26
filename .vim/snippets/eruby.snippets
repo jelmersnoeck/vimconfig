@@ -1,0 +1,43 @@
+snippet form_for
+	<%= form_for(@${1:entity}) do |${2:form}| %>
+	  <% if @$1.errors.any? %>
+		<div id="error_explanation">
+		  <h2><%= pluralize(@$1.errors.count, "error") %> prohibited this post from being saved:</h2>
+		  <ul>
+		  <% @$1.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		  <% end %>
+		  </ul>
+		</div>
+	  <% end %>
+	  ${3}
+	  <div class="actions">
+		<%= $2.submit %>
+	  </div>
+	<% end %>
+snippet lt
+	<%= link_to "${1:caption}", ${2:path} %>${3}
+snippet each
+	<% ${1:collection}.each do |${2:member}| %>
+	  ${3}
+	<% end %>
+snippet if
+	<% if ${1:condition} %>
+	  ${2}
+	<% end %>
+snippet unless
+	<% unless ${1:cond} %>
+	  ${2}
+	<% end %>
+snippet ife
+	<% if ${1:cond} %>
+	  ${2}
+	<% else %>
+	  ${3}
+	<% end %>
+snippet ff
+	<div class="field">
+	  <%= ${1:form}.label :${2:tag} %><br>
+	  <%= $1.${3:text_field} :$2 %>
+	</div>
+	${4}
