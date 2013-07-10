@@ -46,3 +46,9 @@
 [submodule ".vim/bundle/coffee-script"]
 	path = .vim/bundle/coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/rspec"]
+	path = .vim/bundle/rspec
+	url = https://github.com/Keithbsmiley/rspec.vim.git
+[submodule ".vim/bundle/rspec-runner"]
+	path = .vim/bundle/rspec-runner
+	url = git@github.com:thoughtbot/vim-rspec.git
