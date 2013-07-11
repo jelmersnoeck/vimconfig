@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/rspec-runner"]
 	path = .vim/bundle/rspec-runner
 	url = git@github.com:thoughtbot/vim-rspec.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = git@github.com:garbas/vim-snipmate.git
