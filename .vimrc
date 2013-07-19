@@ -99,6 +99,8 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 
 " ----- Custom mapping -----
+map <leader>su :sp ~/Dropbox/work/speed-up<cr>
+map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
