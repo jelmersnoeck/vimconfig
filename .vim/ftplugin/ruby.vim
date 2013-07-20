@@ -1,7 +1,7 @@
 " ----- RSpec ----
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
-map <leader>r :!echo "clear && rake test %" > test-commands<cr><cr>
+map <leader>t :!clear && rake test:units TEST=%<cr>
 
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
