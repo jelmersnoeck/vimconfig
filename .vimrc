@@ -77,7 +77,7 @@ set hlsearch
 
 syntax on				" enable syntax highlighting.
 color twilight256		" use zenburn colorscheme.
-set synmaxcol=512		" try highlighting maximum 512 columns.
+set synmaxcol=80		" try highlighting maximum 512 columns.
 
 " ----- Formatting -----
 
@@ -133,11 +133,3 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
-
-" Vim-Todo mapping
-nmap <Leader>o :call Todo_ToggleTickbox()<cr>
-vmap <Leader>o :call Todo_ToggleTickbox()<cr>
-nmap <Leader>v :call Todo_TickFinished()<cr>
-vmap <Leader>v :call Todo_TickFinished()<cr>
-nmap <Leader>x :call Todo_TickCancelled()<cr>
-vmap <Leader>x :call Todo_TickCancelled()<cr>
