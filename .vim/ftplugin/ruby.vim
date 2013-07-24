@@ -1,8 +1,8 @@
 " ----- RSpec ----
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
-map <leader>t :!clear && ruby -Itest %<cr>
-map <leader>tt :!echo "clear && ruby -Itest %" >> test-commands<cr><cr>
+map <leader>t :ZeusTest %<cr>
+map <leader>cr :VimuxCloseRunner<cr>
 
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
