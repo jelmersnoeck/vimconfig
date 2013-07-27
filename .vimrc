@@ -17,6 +17,7 @@ set softtabstop=4		" mindblowing.
 set tabstop=4			" skullcracking.
 set expandtab
 set backspace=indent,eol,start
+set nofoldenable
 
 " ----- UI settings -----
 
@@ -87,6 +88,15 @@ map <leader>n :call RenameFile()<cr>
 map <leader>su :sp ~/Dropbox/work/speed-up<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
+
+map <leader>gs :Gstatus<cr>
+map <leader>gb :Gbrowse<cr>
+map <leader>gd :Gdiff<cr>
+map <leader>gl :Glog<cr>
+map <leader>gc :Gcommit<cr>
+map <leader>gr :Gread<cr>
+
+map <leader>vrc :so $MYVIMRC<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
