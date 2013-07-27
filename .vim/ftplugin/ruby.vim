@@ -33,6 +33,10 @@ function! RunTest()
     if filereadable("zeus.json")
         exec ":ZeusTest " . g:rb_test_file
     else
-        call VimuxRunCommand("clear && rake test TEST=" . g:rb_test_file)
+        if filereadable("Rakefile")
+            call VimuxRunCommand("clear && rake test TEST=" . g:rb_test_file)
+        else
+            call VimuxRunCommand("clear && ruby -Itest " . g:rb_test_file)
+        end
     end
 endfunction
