@@ -11,8 +11,6 @@ filetype plugin indent on
 
 set autoindent			" automatic indent new lines.
 set smartindent			" make it smart.
-set copyindent			" copy structure of existing lines.
-set cindent				" enable automatic C program indenting.
 set nowrap				" do not wrap lines.
 set shiftwidth=4		" use four characters for tabs.
 set softtabstop=4		" mindblowing.
@@ -23,26 +21,18 @@ set backspace=indent,eol,start
 " ----- UI settings -----
 
 set ruler				" always show cursor position.
-set showmode			" show the mode we're currently in.
 set showcmd				" always display commands.
 set showmatch			" highlight matching brackets/showbraces.
-set list				" enable listcharacters.
 set laststatus=2		" show status line.
 set cursorline			" visualize current line.
 set nopaste				" don't use stupid paste settings
 set colorcolumn=80
-set autoread
 set history=1000
-
-" Remember undo's even when buffer has been in the background.
-" Also allows for sending buffers to the background without saving...
-set hidden
-set autowrite
 
 " ----- File navigation -----
 
 set wildmenu			" display all possibilities on autocomplete.
-set wildmode=longest,list,full
+set wildmode=longest,list
 
 " ----- Command settings -----
 set shell=bash
@@ -59,10 +49,6 @@ nnoremap <c-l> <c-w>l
 " This will enable us to have a nice choice with ctags
 nnoremap <C-]> g<C-]>
 
-" Hop from method to method
-nmap <c-n> ]]
-nmap <c-m> [[
-
 " Copy to our clipboard
 map <leader>y !pbcopy<CR>u
 
@@ -77,7 +63,6 @@ set hlsearch
 
 syntax on				" enable syntax highlighting.
 color twilight256		" use zenburn colorscheme.
-set synmaxcol=80		" try highlighting maximum 512 columns.
 
 " ----- Formatting -----
 
@@ -115,13 +100,9 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Do not pollute the working directory with swap and other files.
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-" custom statusline
-set statusline=%<%f\ %m%r\ %=line\ %l\ of\ %L\ %(@\ %c%V%)\ %25.25(%{&ff},%{strlen(&fenc)?&fenc:'none'}\ %y%)\ "
-
 " .tpl files are mainly (x)html files, xhtml gives better omni completion.
 autocmd BufNewFile,BufRead *.tpl set filetype=xhtml
 autocmd BufNewFile,BufRead *.twig set filetype=htmldjango
-autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
