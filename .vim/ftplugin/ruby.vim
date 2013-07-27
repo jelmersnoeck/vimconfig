@@ -13,7 +13,7 @@ set expandtab
 set softtabstop=2
 
 function! RunTestFile()
-    let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\|_test.rb\)$') != -1
+    let in_test_file = match(expand("%"), '\(_spec.rb\|_test.rb\)$') != -1
     if in_test_file
         call SetTestFile()
     elseif !exists("g:rb_test_file")
