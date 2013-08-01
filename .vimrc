@@ -95,6 +95,7 @@ map <leader>gd :Gdiff<cr>
 map <leader>gl :Glog<cr>
 map <leader>gc :Gcommit<cr>
 map <leader>gr :Gread<cr>
+map <leader>ga :Gwrite<cr>
 
 map <leader>vrc :so $MYVIMRC<cr>
 
