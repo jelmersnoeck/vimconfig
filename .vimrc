@@ -86,6 +86,7 @@ map <leader>n :call RenameFile()<cr>
 
 " ----- Custom mapping -----
 map <leader>su :sp ~/Dropbox/work/speed-up<cr>
+map <leader>bi :sp ~/Dropbox/work/blog-ideas<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
 

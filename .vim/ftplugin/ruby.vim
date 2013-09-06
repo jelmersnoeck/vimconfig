@@ -1,6 +1,6 @@
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
-map <leader>t :call RunTestFile()<cr>
+map <leader>t :call RunTestFile()<cr><cr>
 map <leader>cr :VimuxCloseRunner<cr>
 
 " Easily add a ' => ' sign
@@ -33,7 +33,9 @@ function! RunTest()
     if filereadable("zeus.json")
         exec ":ZeusTest " . g:rb_test_file
     else
-        if filereadable("Rakefile")
+        if filereadable(".rspec")
+            call VimuxRunCommand("clear && rspec " . g:rb_test_file)
+        elseif filereadable("Rakefile")
             call VimuxRunCommand("clear && rake test TEST=" . g:rb_test_file)
         else
             call VimuxRunCommand("clear && ruby -Itest " . g:rb_test_file)
