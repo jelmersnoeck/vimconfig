@@ -49,7 +49,9 @@ snippet ife
 	<% end %>
 snippet ff
 	<div class="field">
-	  <%= ${1:form}.label :${2:tag} %><br>
+	  <%= ${1:form}.label :${2:tag} %>
 	  <%= $1.${3:text_field} :$2 %>
 	</div>
 	${4}
+snippet cf
+	<% content_for :${1:for}, '${2:content}' %>
