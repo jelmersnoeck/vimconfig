@@ -97,6 +97,8 @@ map <leader>gl :Glog<cr>
 map <leader>gc :Gcommit<cr>
 map <leader>gr :Gread<cr>
 map <leader>ga :Gwrite<cr>
+map <leader>sp :set paste<cr>
+map <leader>np :set nopaste<cr>
 
 map <leader>vrc :so $MYVIMRC<cr>
 
