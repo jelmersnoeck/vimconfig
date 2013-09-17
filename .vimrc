@@ -40,6 +40,9 @@ set shell=bash
 set grepprg=ack
 
 " ----- Movement -----
+" Do not allow backspace/delete. Learn to use your keyboard.
+:inoremap <BS> <Nop>
+:inoremap <Del> <Nop>
 
 " Less finger wrecking window navigation.
 nnoremap <c-j> <c-w>j
