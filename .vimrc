@@ -18,6 +18,7 @@ set tabstop=4			" skullcracking.
 set expandtab
 set backspace=indent,eol,start
 set nofoldenable
+set rnu
 
 " ----- UI settings -----
 

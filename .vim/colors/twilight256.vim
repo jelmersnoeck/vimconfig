@@ -250,7 +250,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
     "call <SID>X("Folded", "ffd700", "4d4d4d", "")
     "call <SID>X("FoldColumn", "d2b48c", "4d4d4d", "")
     "call <SID>X("IncSearch", "708090", "f0e68c", "")
-    call <SID>X("LineNr", "CCCCCC", "", "")
+    call <SID>X("LineNr", "424242", "", "")
     "call <SID>X("ModeMsg", "D4D4D4", "", "")
     "call <SID>X("MoreMsg", "2e8b57", "", "")
     "call <SID>X("NonText", "addbe7", "000000", "bold")
