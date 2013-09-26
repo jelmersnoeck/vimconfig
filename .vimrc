@@ -93,6 +93,7 @@ map <leader>su :sp ~/Dropbox/work/speed-up<cr>
 map <leader>bi :sp ~/Dropbox/work/blog-ideas<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
+map <leader>w :call SaveAndRefreshChrome()<cr>
 
 map <leader>gs :Gstatus<cr>
 map <leader>gb :Gbrowse<cr>
@@ -133,3 +134,10 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
+
+" Save and refresh Chrome
+function! SaveAndRefreshChrome()
+    w
+    silent exec '!osascript ~/.scripts/refresh-chrome.scpt'
+    redraw!
+endfunction
