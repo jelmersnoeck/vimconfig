@@ -94,7 +94,6 @@ map <leader>bi :sp ~/Dropbox/work/blog-ideas<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
 map <leader>w :call SaveAndRefreshChrome()<cr>
-
 map <leader>gs :Gstatus<cr>
 map <leader>gb :Gbrowse<cr>
 map <leader>gd :Gdiff<cr>
@@ -104,8 +103,8 @@ map <leader>gr :Gread<cr>
 map <leader>ga :Gwrite<cr>
 map <leader>sp :set paste<cr>
 map <leader>np :set nopaste<cr>
-
 map <leader>vrc :so $MYVIMRC<cr>
+map <leader>p :set paste<cr>o<C-v>:set nopaste<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
