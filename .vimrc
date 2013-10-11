@@ -1,3 +1,5 @@
+silent !stty -ixon > /dev/null 2>/dev/null " Make <C-s> and <C-q> overwrites possible
+
 " ----- Defaults -----
 
 set nocompatible		" use Vim defaults.
@@ -18,7 +20,9 @@ set tabstop=4			" skullcracking.
 set expandtab
 set backspace=indent,eol,start
 set nofoldenable
-set rnu
+set rnu                 " Relative line numbering
+set autoread            " Reload files changed outside buffer automatically
+set scrolloff=5         " Always show x number of lines under/above cursor
 
 " ----- UI settings -----
 
@@ -55,7 +59,7 @@ nnoremap <c-l> <c-w>l
 nnoremap <C-]> g<C-]>
 
 " Copy to our clipboard
-map <leader>y !pbcopy<CR>u
+map <leader>y :"+y<cr>
 
 " ----- Searching -----
 
@@ -109,6 +113,8 @@ map <leader>cr :VimuxCloseRunner<cr>
 map <leader>em :RExtractMethod<cr>
 map <leader>riv :RRenameInstanceVariable<cr>
 map <leader>rlv :RRenameLocalVariable<cr>
+inoremap <c-s> <Esc>:w<cr>
+inoremap <c-q> <Esc>:q<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
