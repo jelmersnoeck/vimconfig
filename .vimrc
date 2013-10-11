@@ -105,6 +105,10 @@ map <leader>sp :set paste<cr>
 map <leader>np :set nopaste<cr>
 map <leader>vrc :so $MYVIMRC<cr>
 map <leader>p :set paste<cr>o<C-v>:set nopaste<cr>
+map <leader>cr :VimuxCloseRunner<cr>
+map <leader>em :RExtractMethod<cr>
+map <leader>riv :RRenameInstanceVariable<cr>
+map <leader>rlv :RRenameLocalVariable<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·

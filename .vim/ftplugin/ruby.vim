@@ -1,7 +1,6 @@
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
 map <leader>t :call RunTestFile()<cr><cr>
-map <leader>cr :VimuxCloseRunner<cr>
 
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
