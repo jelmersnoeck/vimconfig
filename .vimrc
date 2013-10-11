@@ -1,4 +1,5 @@
-silent !stty -ixon > /dev/null 2>/dev/null " Make <C-s> and <C-q> overwrites possible
+" Make <C-s> and <C-q> overwrites possible
+silent !stty -ixon > /dev/null 2>/dev/null
 
 " ----- Defaults -----
 
