@@ -108,7 +108,7 @@ map <leader>riv :RRenameInstanceVariable<cr>
 map <leader>rlv :RRenameLocalVariable<cr>
 map <c-s> :w<cr>
 imap <c-s> <Esc>:w<cr>
-map <c-q> <Esc>:q<cr>
+map <c-q> :q<cr><C-l>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
