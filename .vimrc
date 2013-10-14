@@ -2,16 +2,13 @@
 silent !stty -ixon > /dev/null 2>/dev/null
 
 " ----- Defaults -----
-
 set nocompatible		" use Vim defaults.
 
 " ----- Pathogen -----
-
 call pathogen#infect()	" Pathogen must be called before filetype detection.
 filetype plugin indent on
 
 " ----- Text formatting -----
-
 set autoindent			" automatic indent new lines.
 set smartindent			" make it smart.
 set nowrap				" do not wrap lines.
@@ -26,7 +23,6 @@ set autoread            " Reload files changed outside buffer automatically
 set scrolloff=5         " Always show x number of lines under/above cursor
 
 " ----- UI settings -----
-
 set ruler				" always show cursor position.
 set showcmd				" always display commands.
 set showmatch			" highlight matching brackets/showbraces.
@@ -37,7 +33,6 @@ set colorcolumn=80
 set history=1000
 
 " ----- File navigation -----
-
 set wildmenu			" display all possibilities on autocomplete.
 set wildmode=longest,list
 
@@ -63,19 +58,16 @@ nnoremap <C-]> g<C-]>
 map <leader>y :"+y<cr>
 
 " ----- Searching -----
-
 set ignorecase			" no case sensitivity please.
 set smartcase			" search case sensitive if i'm willing to.
 set incsearch			" do incremental search.
 set hlsearch
 
 " ----- Syntax and such -----
-
 syntax on				" enable syntax highlighting.
 color twilight256		" use zenburn colorscheme.
 
 " ----- Formatting -----
-
 set fileformat=unix		" always use unix fileformat.
 set encoding=utf-8		" force UTF-8 encoding.
 
@@ -98,7 +90,6 @@ map <leader>su :sp ~/Dropbox/work/speed-up<cr>
 map <leader>bi :sp ~/Dropbox/work/blog-ideas<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
-map <leader>w :call SaveAndRefreshChrome()<cr>
 map <leader>gs :Gstatus<cr>
 map <leader>gb :Gbrowse<cr>
 map <leader>gd :Gdiff<cr>
@@ -172,11 +163,4 @@ function! AlternateForCurrentFile()
     end
   endif
   return new_file
-endfunction
-
-" Save and refresh Chrome
-function! SaveAndRefreshChrome()
-    w
-    silent exec '!osascript ~/.scripts/refresh-chrome.scpt'
-    redraw!
 endfunction
