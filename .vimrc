@@ -55,7 +55,8 @@ nnoremap <c-l> <c-w>l
 nnoremap <C-]> g<C-]>
 
 " Copy to our clipboard
-map <leader>y :"+y<cr>
+map <leader>y "+y<cr>
+
 
 " ----- Searching -----
 set ignorecase			" no case sensitivity please.
