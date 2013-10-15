@@ -106,9 +106,11 @@ map <leader>cr :VimuxCloseRunner<cr>
 map <leader>em :RExtractMethod<cr>
 map <leader>riv :RRenameInstanceVariable<cr>
 map <leader>rlv :RRenameLocalVariable<cr>
+nnoremap <leader>. :call OpenTestAlternate()<cr>
 map <c-s> :w<cr>
 imap <c-s> <Esc>:w<cr>
 map <c-q> :q<cr><C-l>
+map <leader>vt :vs<cr> :call OpenTestAlternate()<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
@@ -139,7 +141,6 @@ let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
 
 " Alternate between test and implementation
-nnoremap <leader>. :call OpenTestAlternate()<cr>
 function! OpenTestAlternate()
   let new_file = AlternateForCurrentFile()
   exec ":e " . new_file
