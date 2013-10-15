@@ -111,6 +111,7 @@ map <c-s> :w<cr>
 imap <c-s> <Esc>:w<cr>
 map <c-q> :q<cr><C-l>
 map <leader>vt :vs<cr> :call OpenTestAlternate()<cr>
+map <leader>rt :call VimuxRunCommand("clear && rake test")<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
