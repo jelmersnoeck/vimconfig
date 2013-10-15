@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = git@github.com:tsaleh/vim-matchit.git
+[submodule ".vim/bundle/vim-addon-mw-utils"]
+	path = .vim/bundle/vim-addon-mw-utils
+	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
