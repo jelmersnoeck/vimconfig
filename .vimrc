@@ -31,6 +31,7 @@ set cursorline			" visualize current line.
 set nopaste				" don't use stupid paste settings
 set colorcolumn=80
 set history=1000
+set tabpagemax=999
 
 " ----- File navigation -----
 set wildmenu			" display all possibilities on autocomplete.
@@ -103,6 +104,7 @@ map <leader>np :set nopaste<cr>
 map <leader>vrc :so $MYVIMRC<cr>
 map <leader>p :set paste<cr>o<C-v>:set nopaste<cr>
 map <leader>cr :VimuxCloseRunner<cr>
+map <leader>rdm :call VimuxRunCommand("clear && rdm && rdt")<cr>
 map <leader>em :RExtractMethod<cr>
 map <leader>riv :RRenameInstanceVariable<cr>
 map <leader>rlv :RRenameLocalVariable<cr>
