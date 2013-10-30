@@ -24,13 +24,11 @@ snippet each
 snippet i18n
 	<%= I18n.t('${1:translation}') %>
 snippet def
-	def ${1:method}${2:(args)}
-		${3}
-	end${4}
+	def ${1:method}${2}
+	end${3}
 snippet sdef
-	def self.${1:method}${2:(args)}
-		${3}
-	end${4}
+	def ${1:method}${2}
+	end${3}
 snippet pry
 	require 'pry'
 	pry${1}
