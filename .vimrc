@@ -89,7 +89,6 @@ map <leader>n :call RenameFile()<cr>
 
 " ----- Custom mapping -----
 map <leader>su :sp ~/Dropbox/work/speed-up<cr>
-map <leader>bi :sp ~/Dropbox/work/blog-ideas<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
 map <leader>gs :Gstatus<cr>
@@ -114,6 +113,7 @@ imap <c-s> <Esc>:w<cr>
 map <c-q> :q<cr><C-l>
 map <leader>vt :vs<cr> :call OpenTestAlternate()<cr>
 map <leader>rt :call VimuxRunCommand("clear && rake test")<cr>
+map <leader>bi :call VimuxRunCommand("bundle install")<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
