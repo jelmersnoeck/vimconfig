@@ -114,6 +114,8 @@ map <c-q> :q<cr><C-l>
 map <leader>vt :vs<cr> :call OpenTestAlternate()<cr>
 map <leader>rt :call VimuxRunCommand("clear && rake test")<cr>
 map <leader>bi :call VimuxRunCommand("bundle install")<cr>
+map <leader>hc :!hub compare<cr><cr>
+map <leader>hb :!hub browse<cr><cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
