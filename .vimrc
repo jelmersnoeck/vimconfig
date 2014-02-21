@@ -43,15 +43,16 @@ set shell=bash
 set grepprg=ack
 
 " ----- Movement -----
-" Do not allow backspace/delete. Learn to use your keyboard.
-:inoremap <BS> <Nop>
-:inoremap <Del> <Nop>
+" Learn Vim.
 
 " Less finger wrecking window navigation.
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+" Searching redo
+nnoremap <CR> :noh<CR><CR>
 
 " This will enable us to have a nice choice with ctags
 nnoremap <C-]> g<C-]>
