@@ -1,6 +1,8 @@
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
 map <leader>t :call RunTestFile()<cr><cr>
+map <leader>T :call RunSingleRakeTest()<cr><cr>
+map <leader>tt :call RunSingleRubyTest()<cr><cr>
 
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
@@ -12,23 +14,7 @@ set expandtab
 set softtabstop=2
 
 function! RunTestFile()
-    let in_test_file = match(expand("%"), '\(_spec.rb\|_test.rb\)$') != -1
-    if in_test_file
-        call SetTestFile()
-    elseif !exists("g:rb_test_file")
-        return
-    end
-
-    call RunTest()
-endfunction
-
-function! SetTestFile()
-    let g:rb_test_file = @%
-endfunction
-
-function! RunTest()
-    :w
-
+    call LoadTestFile()
     if filereadable("zeus.json")
         exec ":ZeusTest " . g:rb_test_file
     else
@@ -41,6 +27,93 @@ function! RunTest()
         end
     end
 endfunction
+
+function! RunSingleRakeTest()
+    call LoadSingleTest("rake test TEST='%p' TESTOPTS=\"--name='/%c/'\"")
+    call RunSingleTest()
+endfunction
+
+function! RunSingleRubyTest()
+    call LoadSingleTest("ruby -Itest %p -n '/%c/'")
+    call RunSingleTest()
+endfunction
+
+function! RunSingleTest()
+    if filereadable("zeus.json")
+        call VimuxRunCommand("zeus " . g:rb_single_test)
+    else
+        call VimuxRunCommand(g:rb_single_test)
+    end
+endfunction
+
+function! LoadTestFile()
+    let in_test_file = match(expand("%"), '\(_spec.rb\|_test.rb\)$') != -1
+    if in_test_file
+        call SetTestFile()
+    elseif !exists("g:rb_test_file")
+        return
+    end
+    :w
+endfunction
+
+function! LoadSingleTest(command)
+    let case = FindCase(s:test_case_patterns['should'])
+    let spec_case = FindCase(s:test_case_patterns['spec'])
+    let cmd = a:command
+    if case != 'false'
+        let cmd = substitute(cmd, '%c', case, 'g')
+    else
+        let name = matchstr( spec_case, '\v%("([^"]*)"|''([^'']*)'')' )
+        let name = substitute(name, '\s\+', '\.', 'g')
+        let name = substitute(name, '^["|'']*\(.\{-}\)["|'']$', '\1', '')
+        let spec_case = substitute(spec_case, '.*', name, '')
+        let cmd = substitute(cmd, '%c', spec_case, 'g')
+    end
+    let cmd = substitute(cmd, '%p', EscapeBackSlash(@%), 'g')
+    let g:rb_single_test = cmd
+endfunction
+
+function! SetTestFile()
+    let g:rb_test_file = @%
+endfunction
+
+function! FindCase(patterns)
+  let ln = a:firstline
+  while ln > 0
+    let line = getline(ln)
+    for pattern in keys(a:patterns)
+      if line =~ pattern
+        if pattern == 'spec'
+          return a:patterns[pattern](ln)
+        else
+          return a:patterns[pattern](line)
+        endif
+      endif
+    endfor
+    let ln -= 1
+  endwhile
+  return 'false'
+endfunction
+
+function! GetShouldCaseName1(str)
+  return split(a:str, '"')[1]
+endfunction
+
+function! GetShouldCaseName2(str)
+  return split(a:str, "'")[1]
+endfunction
+
+function! GetSpecLine(str)
+    return a:str
+endfunction
+
+function! EscapeBackSlash(str)
+    return substitute(a:str, '\', '\\\\', 'g')
+endfunction
+
+let s:test_case_patterns = {}
+let s:test_case_patterns['should'] = {'^\s*should \s*"':function('GetShouldCaseName1'), "^\\s*should \\s*'":function('GetShouldCaseName2')}
+let s:test_case_patterns['spec'] = {'^\s*context \s*':function('GetSpecLine')}
 
 " FILE: "/home/johannes/ruby.vim"
 " Last Modification: "Mon, 06 May 2002 23:42:11 +0200 (johannes)"
