@@ -51,6 +51,8 @@ snippet should
 	should '${1}' do
 		${2}
 	end
+snippet fgbs
+	@${1:item} = FactoryGirl.build_stubbed(:$1)${2}
 snippet context
 	context ${1} do
 		${2}
