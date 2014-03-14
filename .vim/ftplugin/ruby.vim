@@ -2,7 +2,7 @@
 " information.
 map <leader>t :call RunTestFile()<cr><cr>
 map <leader>T :call RunSingleRakeTest()<cr><cr>
-map <leader>tt :call RunSingleRubyTest()<cr><cr>
+map <leader>e :call RunSingleRubyTest()<cr><cr>
 
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
@@ -20,6 +20,8 @@ function! RunTestFile()
     else
         if filereadable(".rspec")
             call VimuxRunCommand("clear && rspec " . g:rb_test_file)
+        elseif filereadable(".springify")
+            call VimuxRunCommand("clear && spring rake test TEST=" . g:rb_test_file)
         elseif filereadable("Rakefile")
             call VimuxRunCommand("clear && rake test TEST=" . g:rb_test_file)
         else
