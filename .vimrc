@@ -119,6 +119,7 @@ map <leader>bi :call VimuxRunCommand("bundle install")<cr>
 map <leader>hc :!hub compare<cr><cr>
 map <leader>hb :!hub browse<cr><cr>
 map <leader>rp :call VimuxRunCommand("repower")<cr>
+map <leader>cp :CtrlPClearCache<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
