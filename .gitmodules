@@ -39,7 +39,7 @@
 	url = git@github.com:ecomba/vim-ruby-refactoring.git
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
-	url = git@github.com:tsaleh/vim-matchit.git
+	url = git@github.com:tmhedberg/matchit.git
 [submodule ".vim/bundle/vim-addon-mw-utils"]
 	path = .vim/bundle/vim-addon-mw-utils
 	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
