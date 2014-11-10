@@ -18,8 +18,7 @@ set tabstop=4			" skullcracking.
 set expandtab
 set backspace=indent,eol,start
 set nofoldenable
-set rnu                 " Relative line numbering
-set number              " Show the current line number instead of 0
+set relativenumber      " Relative line numbering
 set autoread            " Reload files changed outside buffer automatically
 set scrolloff=5         " Always show x number of lines under/above cursor
 
