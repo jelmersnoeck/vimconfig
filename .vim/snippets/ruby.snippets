@@ -53,7 +53,40 @@ snippet should
 	end
 snippet fgbs
 	@${1:item} = FactoryGirl.build_stubbed(:$1)${2}
+snippet fgbc
+	@${1:item} = FactoryGirl.create(:$1)${2}
 snippet context
 	context ${1} do
 		${2}
 	end
+snippet tu
+	require 'test_helper'
+
+	class ${1:class}Test < ActiveSupport::TestCase
+		context $1 do
+			${2}
+		end
+	end
+snippet it
+	it "should ${1:more}" do
+		${2}
+	end
+snippet desc
+	describe "${1:describe}" do
+		${2}
+	end
+snippet before
+	before do
+		${1}
+	end
+snippet after
+	after do
+		${1}
+	end
+snippet rm
+	require "rails_helper"
+
+	RSpec.describe ${1:model}, :type => :model do
+	end
+snippet expect
+	expect(${1:what}).to ${2:dowhat}
