@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/surround"]
 	path = .vim/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/command-t"]
-	path = .vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
 [submodule ".vim/bundle/ctrlp"]
 	path = .vim/bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
@@ -31,9 +28,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule ".vim/bundle/vim-ruby-refactoring"]
-	path = .vim/bundle/vim-ruby-refactoring
-	url = git@github.com:ecomba/vim-ruby-refactoring.git
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = git@github.com:tmhedberg/matchit.git
@@ -46,9 +40,6 @@
 [submodule ".vim/bundle/vim-webapi"]
 	path = .vim/bundle/vim-webapi
 	url = git@github.com:mattn/webapi-vim.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
 [submodule ".vim/bundle/vim-golang"]
 	path = .vim/bundle/vim-golang
 	url = git@github.com:jnwhiteh/vim-golang.git
