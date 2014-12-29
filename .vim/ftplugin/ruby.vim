@@ -2,7 +2,6 @@
 " information.
 map <leader>t :call RunTestFile()<cr><cr>
 map <leader>T :call RunSingleRakeTest()<cr><cr>
-map <leader>e :call RunSingleRubyTest()<cr><cr>
 
 " Easily add a ' => ' sign
 imap <c-l> <space>=><space>
@@ -13,39 +12,33 @@ set tabstop=2
 set expandtab
 set softtabstop=2
 
+function! RunTest(command)
+    if filereadable(".springify")
+        call VimuxRunCommand("clear && spring " . a:command)
+    else
+        call VimuxRunCommand("clear && " . a:command)
+    end
+endfunction
+
 function! RunTestFile()
     call LoadTestFile()
-    if filereadable("zeus.json")
-        exec ":ZeusTest " . g:rb_test_file
+    if g:rb_test_file =~ "_spec.rb"
+        call RunTest("be rspec " . g:rb_test_file)
+    elseif filereadable("Rakefile")
+        call RunTest("rk test TEST=" . g:rb_test_file)
     else
-        if filereadable(".rspec")
-            call VimuxRunCommand("clear && rspec " . g:rb_test_file)
-        elseif filereadable(".springify")
-            call VimuxRunCommand("clear && spring rake test TEST=" . g:rb_test_file)
-        elseif filereadable("Rakefile")
-            call VimuxRunCommand("clear && rake test TEST=" . g:rb_test_file)
-        else
-            call VimuxRunCommand("clear && ruby -Itest " . g:rb_test_file)
-        end
+        call RunTest("ruby -Itest " . g:rb_test_file)
     end
 endfunction
 
 function! RunSingleRakeTest()
-    call LoadSingleTest("rake test TEST='%p' TESTOPTS=\"--name='/%c/'\"")
-    call RunSingleTest()
-endfunction
-
-function! RunSingleRubyTest()
-    call LoadSingleTest("ruby -Itest %p -n '/%c/'")
-    call RunSingleTest()
-endfunction
-
-function! RunSingleTest()
-    if filereadable("zeus.json")
-        call VimuxRunCommand("zeus " . g:rb_single_test)
+    call LoadTestFile()
+    if g:rb_test_file =~ "_spec.rb"
+        call LoadSingleTest("be rspec '%p':" . line("."))
     else
-        call VimuxRunCommand(g:rb_single_test)
+        call LoadSingleTest("rk test TEST='%p' TESTOPTS=\"--name='/%c/'\"")
     end
+    call RunTest(g:rb_single_test)
 endfunction
 
 function! LoadTestFile()
@@ -166,7 +159,7 @@ function! s:Ruby_Matchit()
 	    endif
 	endwhile
     elseif curr_word =~ '\<\(if\|unless\|elsif\|else\|case\|when\|while\|'
-		\.'until\|def\|\|module\|context\|should\|class\)\>'
+		\.'until\|def\|\|module\|context\|describe\|it\|before\|should\|class\)\>'
 	while 1
 	    normal j
 	    if strlen(matchstr(getline("."), "^\\s*")) == spaces

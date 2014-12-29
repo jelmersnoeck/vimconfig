@@ -86,7 +86,26 @@ snippet after
 snippet rm
 	require "rails_helper"
 
-	RSpec.describe ${1:model}, :type => :model do
+	RSpec.describe ${1:model}, :type => :${2:model} do
+		${3}
 	end
 snippet expect
 	expect(${1:what}).to ${2:dowhat}
+snippet change
+	expect {
+		${1:action}
+	}.to change { ${2:change} }.by ${3:amount}
+snippet redi
+	expect(response).to redirect_to(${1:route}_path${2})
+snippet resp
+	expect(response.status).to eq(${1:200})
+snippet temp
+	expect(response).to render_template(:${1:template})
+snippet assign
+	expect(assigns(:${1:var})).to eq(${2:equal})
+snippet iass
+	expect(assigns(:${1:var})).to be_truthy
+snippet etr
+	expect(${1:var}).to be true
+snippet efa
+	expect(${1:var}).to be false
