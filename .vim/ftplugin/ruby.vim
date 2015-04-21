@@ -38,6 +38,7 @@ function! RunSingleRakeTest()
     else
         call LoadSingleTest("rk test TEST='%p' TESTOPTS=\"--name='/%c/'\"")
     end
+    let g:rb_test_file = g:rb_test_file . ":" . line(".")
     call RunTest(g:rb_single_test)
 endfunction
 
