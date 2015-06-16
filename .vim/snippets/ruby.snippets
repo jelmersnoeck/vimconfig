@@ -109,3 +109,11 @@ snippet etr
 	expect(${1:var}).to be true
 snippet efa
 	expect(${1:var}).to be false
+snippet rr
+	require_relative '${1}'
+snippet mt
+	require 'minitest/autorun'
+
+	class ${1:Class}Test < Minitest::Test
+		${2}
+	end
