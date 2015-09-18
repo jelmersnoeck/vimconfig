@@ -1,0 +1,25 @@
+snippet func
+	func ${1:name}(${2:arguments}) ${3:return}{
+		${4:content}
+	}
+
+snippet suite
+	type ${1:suite}Suite struct {
+		suite.Suite
+	}
+
+	func Test$1Suite(t *testing.T) {
+		suite.Run(t, new($1Suite))
+	}
+
+	${2}
+
+snippet test
+	func (s *${1:suite}Suite) Test${2:method}() {
+		${3}
+	}
+
+snippet if
+	if ${1:conditional} {
+		${2}
+	}
