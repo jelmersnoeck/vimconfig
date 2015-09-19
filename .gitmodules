@@ -46,3 +46,9 @@
 [submodule ".vim/bundle/vim-go"]
 	path = .vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/vim-yaml"]
+	path = .vim/bundle/vim-yaml
+	url = git@github.com:chase/vim-ansible-yaml.git
+[submodule ".vim/bundle/vim-scss"]
+	path = .vim/bundle/vim-scss
+	url = git@github.com:cakebaker/scss-syntax.vim.git
