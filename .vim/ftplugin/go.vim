@@ -22,5 +22,18 @@ function! LoadTestFile()
 endfunction
 
 function! SetTestFile()
-    let g:rb_test_file = @%
+    let l:currentFilePath = expand("%:p")
+    let l:currentFilePaths = split(l:currentFilePath, "\/")
+    let l:directory = "/" . join(l:currentFilePaths[:-2], "/") . "/"
+    let l:files = split(globpath(l:directory, '*.go'), '\n')
+    let l:testingFiles = []
+    call add(l:testingFiles, expand("%:p"))
+
+    for file in l:files
+        if match(file, '\(_test.go\)$') == -1
+            call add(l:testingFiles, file)
+        end
+    endfor
+
+    let g:rb_test_file = join(l:testingFiles)
 endfunction
