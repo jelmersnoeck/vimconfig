@@ -59,6 +59,10 @@ nnoremap <C-]> g<C-]>
 " Copy to our clipboard
 map <leader>y "+y<cr>
 
+" Forcing :E to work
+" http://stackoverflow.com/a/14367507
+command! -nargs=* -bar -bang -count=0 -complete=dir E Explore <args>
+
 " ----- Searching -----
 set ignorecase			" no case sensitivity please.
 set smartcase			" search case sensitive if i'm willing to.
