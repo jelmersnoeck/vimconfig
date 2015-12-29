@@ -49,3 +49,9 @@
 [submodule ".vim/bundle/vim-scss"]
 	path = .vim/bundle/vim-scss
 	url = git@github.com:cakebaker/scss-syntax.vim.git
+[submodule ".vim/bundle/ag-vim"]
+	path = .vim/bundle/ag-vim
+	url = git@github.com:rking/ag.vim.git
+[submodule ".vim/bundle/vim-es6"]
+	path = .vim/bundle/vim-es6
+	url = https://github.com/isRuslan/vim-es6.git
