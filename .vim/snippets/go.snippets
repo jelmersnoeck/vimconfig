@@ -28,3 +28,13 @@ snippet for
 	for ${1:params} := range ${2:loop} {
 		${3}
 	}
+
+snippet str
+	type ${1:name} struct {
+		${2}
+	}${3}
+
+snippet int
+	type ${1:name} interface {
+		${2}
+	}${3}

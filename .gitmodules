@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vim-es6"]
 	path = .vim/bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
+[submodule ".vim/bundle/vim-protobuf"]
+	path = .vim/bundle/vim-protobuf
+	url = git@github.com:uarun/vim-protobuf.git

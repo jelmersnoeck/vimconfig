@@ -1,6 +1,7 @@
 let g:go_fmt_command = "goimports"
 
 map <leader>t :call RunTestFile()<cr><cr>
+map <leader>ds <Plug>(go-def-vertical)
 
 function! RunTest(command)
     call VimuxRunCommand("clear && " . a:command)
