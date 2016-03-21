@@ -58,3 +58,6 @@
 [submodule ".vim/bundle/vim-protobuf"]
 	path = .vim/bundle/vim-protobuf
 	url = git@github.com:uarun/vim-protobuf.git
+[submodule ".vim/bundle/vim-autoread"]
+	path = .vim/bundle/vim-autoread
+	url = git@github.com:djoshea/vim-autoread.git
