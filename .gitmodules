@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/vim-autoread"]
 	path = .vim/bundle/vim-autoread
 	url = git@github.com:djoshea/vim-autoread.git
+[submodule ".vim/bundle/vim-scala"]
+	path = .vim/bundle/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
