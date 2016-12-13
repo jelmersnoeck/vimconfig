@@ -19,6 +19,11 @@ snippet test
 		${3}
 	}
 
+snippet it
+	t.Run("${1:it}", func(t *testing.T) {
+		${2}
+	})
+
 snippet if
 	if ${1:conditional} {
 		${2}
