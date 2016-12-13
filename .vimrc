@@ -95,33 +95,13 @@ map <leader>n :call RenameFile()<cr>
 map <leader>su :sp ~/Dropbox/work/speed-up<cr>
 map <leader>pn :sp ~/Dropbox/work/programming-notes<cr>
 map <leader>vc :sp ~/.vimrc<cr>
-map <leader>gs :Gstatus<cr>
-map <leader>gb :Gbrowse<cr>
-map <leader>gd :Gdiff<cr>
-map <leader>gl :Glog<cr>
-map <leader>gc :Gcommit<cr>
-map <leader>gr :Gread<cr>
-map <leader>ga :Gwrite<cr>
 map <leader>sp :set paste<cr>
 map <leader>np :set nopaste<cr>
 map <leader>vrc :so $MYVIMRC<cr>
 map <leader>p :set paste<cr>o<C-v>:set nopaste<cr>
-map <leader>cr :VimuxCloseRunner<cr>
-map <leader>rdm :call VimuxRunCommand("clear && rdm && rdt")<cr>
-map <leader>em :RExtractMethod<cr>
-map <leader>riv :RRenameInstanceVariable<cr>
-map <leader>rlv :RRenameLocalVariable<cr>
-nnoremap <leader>. :call OpenTestAlternate()<cr>
 map <c-s> :w<cr>
 imap <c-s> <Esc>:w<cr>
 map <c-q> :q<cr><C-l>
-map <leader>vt :vs<cr> :call OpenTestAlternate()<cr>
-map <leader>rt :call VimuxRunCommand("clear && rake test")<cr>
-map <leader>bi :call VimuxRunCommand("bundle install")<cr>
-map <leader>hc :!hub compare<cr><cr>
-map <leader>hb :!hub browse<cr><cr>
-map <leader>rp :call VimuxRunCommand("repower")<cr>
-map <leader>cp :CtrlPClearCache<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
