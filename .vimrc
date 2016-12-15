@@ -39,7 +39,7 @@ set wildmode=longest,list
 
 " ----- Command settings -----
 set shell=bash
-set grepprg=ack
+set grepprg=ag
 
 " ----- Movement -----
 " Learn Vim.
@@ -68,6 +68,9 @@ set ignorecase			" no case sensitivity please.
 set smartcase			" search case sensitive if i'm willing to.
 set incsearch			" do incremental search.
 set hlsearch
+
+" Always show tab line at the top
+set showtabline=2
 
 " ----- Syntax and such -----
 syntax on				" enable syntax highlighting.
