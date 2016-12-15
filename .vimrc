@@ -32,6 +32,8 @@ set nopaste				" don't use stupid paste settings
 set colorcolumn=80
 set history=1000
 set tabpagemax=999
+" Dynamically adjust window size of the active window to a minimum width
+let &winwidth = &columns * 6 / 10
 
 " ----- File navigation -----
 set wildmenu			" display all possibilities on autocomplete.
