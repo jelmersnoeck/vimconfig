@@ -141,3 +141,4 @@ let g:ctrlp_show_hidden = 1
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.exe$\|\.so$\|\.swp\|\.DS_STORE\|.php\~\|\.pyc$\|\.git']
+let NERDTreeMapOpenInTab='<C-t>'
