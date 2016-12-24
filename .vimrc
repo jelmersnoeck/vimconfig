@@ -135,3 +135,4 @@ let g:ctrlp_custom_ignore = {
 
 let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
+let g:ctrlp_show_hidden = 1
