@@ -136,3 +136,8 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
 let g:ctrlp_show_hidden = 1
+
+" Nerdtree
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.exe$\|\.so$\|\.swp\|\.DS_STORE\|.php\~\|\.pyc$\|\.git']
