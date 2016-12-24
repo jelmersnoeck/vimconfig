@@ -19,6 +19,7 @@ set expandtab
 set backspace=indent,eol,start
 set nofoldenable
 set relativenumber      " Relative line numbering
+set number              " Overwrites the current line number to the actual number
 set autoread            " Reload files changed outside buffer automatically
 set scrolloff=5         " Always show x number of lines under/above cursor
 
@@ -32,6 +33,7 @@ set nopaste				" don't use stupid paste settings
 set colorcolumn=80
 set history=1000
 set tabpagemax=999
+
 " Dynamically adjust window size of the active window to a minimum width
 let &winwidth = &columns * 6 / 10
 
