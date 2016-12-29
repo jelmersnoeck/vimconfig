@@ -22,6 +22,7 @@ set relativenumber      " Relative line numbering
 set number              " Overwrites the current line number to the actual number
 set autoread            " Reload files changed outside buffer automatically
 set scrolloff=5         " Always show x number of lines under/above cursor
+set clipboard=unnamed
 
 " ----- UI settings -----
 set ruler				" always show cursor position.
