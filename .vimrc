@@ -36,7 +36,7 @@ set history=1000
 set tabpagemax=999
 
 " Dynamically adjust window size of the active window to a minimum width
-let &winwidth = &columns * 6 / 10
+let &winwidth = &columns * 7 / 12
 
 " ----- File navigation -----
 set wildmenu			" display all possibilities on autocomplete.
@@ -79,7 +79,9 @@ set showtabline=2
 
 " ----- Syntax and such -----
 syntax on				" enable syntax highlighting.
-color twilight256		" use zenburn colorscheme.
+set background=light
+color PaperColor
+" color twilight256		" use zenburn colorscheme.
 
 " ----- Formatting -----
 set fileformat=unix		" always use unix fileformat.
@@ -139,6 +141,7 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
 let g:ctrlp_show_hidden = 1
+nnoremap <leader>cp :CtrlPClearCache<cr>
 
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
