@@ -7,10 +7,10 @@ map <leader>T :call RunSingleRakeTest()<cr><cr>
 imap <c-l> <space>=><space>
 
 " This is the recommended setting for Ruby:
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set softtabstop=2
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal expandtab
+setlocal softtabstop=2
 
 function! RunTest(command)
     if filereadable(".springify")

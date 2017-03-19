@@ -1,5 +1,5 @@
 " This is the recommended setting for Yaml:
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set softtabstop=2
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal expandtab
+setlocal softtabstop=2
