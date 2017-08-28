@@ -36,7 +36,7 @@ set history=1000
 set tabpagemax=999
 
 " Dynamically adjust window size of the active window to a minimum width
-let &winwidth = &columns * 7 / 12
+" let &winwidth = &columns * 7 / 12
 
 " ----- File navigation -----
 set wildmenu			" display all possibilities on autocomplete.
