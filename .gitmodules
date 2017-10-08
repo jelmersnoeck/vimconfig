@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-toml"]
 	path = .vim/bundle/vim-toml
 	url = git@github.com:cespare/vim-toml.git
+[submodule ".vim/bundle/vimux-golang"]
+	path = .vim/bundle/vimux-golang
+	url = git@github.com:benmills/vimux-golang.git
