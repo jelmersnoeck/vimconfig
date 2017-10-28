@@ -132,6 +132,10 @@ autocmd BufNewFile,BufRead *.twig set filetype=htmldjango
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
 
+" Use terraform config
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
 " Tell ctrlp some new settings
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$\|vendor$\|web$\|code-coverage$\|coverage$\|public$\|code-documentation$\|Godeps\/_workspace$\|cookbooks$\|tmp$\|Resources\/doc\|venv$',
