@@ -52,3 +52,9 @@
 [submodule ".vim/bundle/vimux-golang"]
 	path = .vim/bundle/vimux-golang
 	url = git@github.com:benmills/vimux-golang.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git

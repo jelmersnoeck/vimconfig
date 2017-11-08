@@ -81,7 +81,7 @@ set showtabline=2
 syntax on				" enable syntax highlighting.
 set background=light
 color PaperColor
-" color twilight256		" use zenburn colorscheme.
+let g:airline_theme='papercolor'
 
 " ----- Formatting -----
 set fileformat=unix		" always use unix fileformat.
