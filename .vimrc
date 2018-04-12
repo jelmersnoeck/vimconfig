@@ -79,7 +79,7 @@ set showtabline=2
 
 " ----- Syntax and such -----
 syntax on				" enable syntax highlighting.
-set background=light
+set background=dark
 color PaperColor
 let g:airline_theme='papercolor'
 
