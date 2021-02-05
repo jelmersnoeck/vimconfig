@@ -43,9 +43,6 @@
 [submodule ".vim/bundle/vim-autoread"]
 	path = .vim/bundle/vim-autoread
 	url = https://github.com/djoshea/vim-autoread.git
-[submodule ".vim/bundle/vim-terraform"]
-	path = .vim/bundle/vim-terraform
-	url = https://github.com/hashivim/vim-terraform.git
 [submodule ".vim/bundle/vim-toml"]
 	path = .vim/bundle/vim-toml
 	url = git@github.com:cespare/vim-toml.git
@@ -61,3 +58,6 @@
 [submodule ".vim/bundle/carbon"]
 	path = .vim/bundle/carbon
 	url = git@github.com:kristijanhusak/vim-carbon-now-sh.git
+[submodule ".vim/bundle/vim-hcl"]
+	path = .vim/bundle/vim-hcl
+	url = git://github.com/jvirtanen/vim-hcl.git
