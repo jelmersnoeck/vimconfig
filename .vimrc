@@ -138,7 +138,7 @@ let g:terraform_fmt_on_save=1
 
 " Tell ctrlp some new settings
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\.git$\|\.hg$\|\.svn$\|vendor$\|web$\|code-coverage$\|coverage$\|public$\|code-documentation$\|Godeps\/_workspace$\|cookbooks$\|tmp$\|Resources\/doc\|venv$',
+    \ 'dir':  '\.cache$\|\.git$\|\.hg$\|\.svn$\|vendor$\|web$\|code-coverage$\|coverage$\|public$\|code-documentation$\|Godeps\/_workspace$\|cookbooks$\|tmp$\|Resources\/doc\|venv$',
     \ 'file': '\.exe$\|\.so$\|\.swp\|\.DS_STORE\|.php\~\|.pyc$',
     \ }
 
@@ -146,3 +146,5 @@ let g:ctrlp_map = '<c-i>'
 let g:ctrlp_working_path_mode = 'cra'
 let g:ctrlp_show_hidden = 1
 nnoremap <leader>cp :CtrlPClearCache<cr>
+
+au BufRead,BufNewFile *.md setlocal textwidth=80
