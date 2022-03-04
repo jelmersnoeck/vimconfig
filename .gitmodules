@@ -67,3 +67,9 @@
 [submodule ".vim/bundle/vim-markdown-toc"]
 	path = .vim/bundle/vim-markdown-toc
 	url = https://github.com/mzlogin/vim-markdown-toc
+[submodule ".vim/bundle/vim-nix"]
+	path = .vim/bundle/vim-nix
+	url = https://github.com/LnL7/vim-nix.git
+[submodule ".vim/bundle/completor"]
+	path = .vim/bundle/completor
+	url = https://github.com/maralla/completor.vim.git
