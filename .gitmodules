@@ -58,9 +58,6 @@
 [submodule ".vim/bundle/carbon"]
 	path = .vim/bundle/carbon
 	url = git@github.com:kristijanhusak/vim-carbon-now-sh.git
-[submodule ".vim/bundle/vim-hcl"]
-	path = .vim/bundle/vim-hcl
-	url = git://github.com/jvirtanen/vim-hcl.git
 [submodule ".vim/bundle/terraform"]
 	path = .vim/bundle/terraform
 	url = https://github.com/hashivim/vim-terraform.git
