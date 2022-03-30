@@ -131,6 +131,7 @@ autocmd BufNewFile,BufRead *.twig set filetype=htmldjango
 
 " Tell snipmate where to get our snippets
 let g:snippets_dir = "~/.vim/snippets"
+let g:snipMate = { 'snippet_version' : 1 }
 
 " Use terraform config
 let g:terraform_align=1
