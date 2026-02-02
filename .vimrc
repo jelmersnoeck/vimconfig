@@ -21,6 +21,7 @@ set nofoldenable
 set relativenumber      " Relative line numbering
 set number              " Overwrites the current line number to the actual number
 set autoread            " Reload files changed outside buffer automatically
+autocmd FocusGained,BufEnter * checktime " Check for external changes on focus/buffer switch
 set scrolloff=5         " Always show x number of lines under/above cursor
 set clipboard=unnamed
 
@@ -83,6 +84,17 @@ set background=dark
 color PaperColor
 let g:airline_theme='papercolor'
 
+" Use terminal background color
+hi Normal guibg=NONE ctermbg=NONE
+hi LineNr guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
+hi TabLine guibg=NONE ctermbg=NONE
+hi TabLineFill guibg=NONE ctermbg=NONE
+hi StatusLine guibg=NONE ctermbg=NONE
+hi StatusLineNC guibg=NONE ctermbg=NONE
+hi VertSplit guibg=NONE ctermbg=NONE
+hi EndOfBuffer guibg=NONE ctermbg=NONE
+
 " ----- Formatting -----
 set fileformat=unix		" always use unix fileformat.
 set encoding=utf-8		" force UTF-8 encoding.
@@ -112,6 +124,7 @@ map <leader>p :set paste<cr>o<C-v>:set nopaste<cr>
 map <c-s> :w<cr>
 imap <c-s> <Esc>:w<cr>
 map <c-q> :q<cr><C-l>
+map <c-e> :NERDTreeToggle<cr>
 
 " visualize stuff.
 set listchars=tab:→\ ,extends:»,precedes:«,trail:▒,nbsp:·
