@@ -1,10 +1,10 @@
 " I'm using linux fifos for this. See the command "test-listener" for more
 " information.
-map <leader>t :call RunTestFile()<cr><cr>
-map <leader>T :call RunSingleRakeTest()<cr><cr>
+nnoremap <leader>t :call RunTestFile()<cr><cr>
+nnoremap <leader>T :call RunSingleRakeTest()<cr><cr>
 
 " Easily add a ' => ' sign
-imap <c-l> <space>=><space>
+inoremap <c-l> <space>=><space>
 
 " This is the recommended setting for Ruby:
 setlocal shiftwidth=2

@@ -82,7 +82,7 @@ done;
 for sourceFile in .*; do
 
     # Exclude some files.
-    if [[ "$sourceFile" == "install.sh" ]] || [[ "$sourceFile" == "README.md" ]] || [[ "$sourceFile" == "." ]] || [[ "$sourceFile" == ".." ]] || [[ "$sourceFile" == ".git" ]]; then
+    if [[ "$sourceFile" == "install.sh" ]] || [[ "$sourceFile" == "README.md" ]] || [[ "$sourceFile" == "." ]] || [[ "$sourceFile" == ".." ]] || [[ "$sourceFile" == ".git" ]] || [[ "$sourceFile" == ".gitmodules" ]]; then
         continue;
     fi;
 
